@@ -1,0 +1,109 @@
+{
+  "baseline": {
+    "created_at": "2026-08-14T12:11:32+00:00",
+    "source": "https://info.nrk.no/innsyn/",
+    "valid": true
+  },
+  "periods": {
+    "2026-05-25_2026-05-31": {
+      "date_from": "2026-05-25",
+      "date_to": "2026-05-31",
+      "event_id": "6e560d780e931c2e3b49a7ab053fbdd2b4d78c7de8566fafc061ad356f6941de",
+      "first_seen_at": "2026-08-14T12:11:32+00:00",
+      "notification_status": "baseline",
+      "source_url": "https://info.nrk.no/wp-content/uploads/2026/06/Offentlig-journal-25.05.2026-31.05.2026.pdf",
+      "title": "Offentlig journal 25.05.2026 – 31.05.2026 Last ned"
+    },
+    "2026-06-01_2026-06-07": {
+      "date_from": "2026-06-01",
+      "date_to": "2026-06-07",
+      "event_id": "67ec8b37db0320fb34b4a36a94a4fd933ecfcd3cdd46e98223f71baf6fc3a7be",
+      "first_seen_at": "2026-08-14T12:11:32+00:00",
+      "notification_status": "baseline",
+      "source_url": "https://info.nrk.no/wp-content/uploads/2026/06/Offentlig-journal-01.06.2026-07.06.2026.pdf",
+      "title": "Offentlig journal 01.06.2026 – 07.06.2026 Last ned"
+    },
+    "2026-06-08_2026-06-14": {
+      "date_from": "2026-06-08",
+      "date_to": "2026-06-14",
+      "event_id": "629c60953bcfec214b720d52b44b3e325138ff3ca01d590793551689a056c85b",
+      "first_seen_at": "2026-08-14T12:11:32+00:00",
+      "notification_status": "baseline",
+      "source_url": "https://info.nrk.no/wp-content/uploads/2026/06/Offentlig-journal-08.06.2026-14.06.2026.pdf",
+      "title": "Offentlig journal 08.06.2026 – 14.06.2026 Last ned"
+    },
+    "2026-06-15_2026-06-21": {
+      "date_from": "2026-06-15",
+      "date_to": "2026-06-21",
+      "event_id": "0e65c397b08bde4422995ca98707d4a1d1e0bb54bdaf63cee415bcbaac21ba9c",
+      "first_seen_at": "2026-08-14T12:11:32+00:00",
+      "notification_status": "baseline",
+      "source_url": "https://info.nrk.no/wp-content/uploads/2026/06/Offentlig-journal-15.06.2026-21.06.2026.pdf",
+      "title": "Offentlig journal 15.06.2026 – 21.06.2026 Last ned"
+    },
+    "2026-06-22_2026-06-28": {
+      "date_from": "2026-06-22",
+      "date_to": "2026-06-28",
+      "event_id": "4bc53ba1f6c44f67328cc150bfdd895a76d1b1f998eefc13c5f84cd73e87320d",
+      "first_seen_at": "2026-08-14T12:11:32+00:00",
+      "notification_status": "baseline",
+      "source_url": "https://info.nrk.no/wp-content/uploads/2026/07/Offentlig-journal-22.06.2026-28.06.2026.pdf",
+      "title": "Offentlig journal 22.06.2026 – 28.06.2026 Last ned"
+    },
+    "2026-06-29_2026-07-05": {
+      "date_from": "2026-06-29",
+      "date_to": "2026-07-05",
+      "event_id": "6d6d4dbd71dfa6fb942597204da6f6a61cd89660cbb3028fdad3cd5aa8314a80",
+      "first_seen_at": "2026-08-14T12:11:32+00:00",
+      "notification_status": "baseline",
+      "source_url": "https://info.nrk.no/wp-content/uploads/2026/07/Offentlig-journal-29.06.2026-05.07.2026.pdf",
+      "title": "Offentlig journal 29.06.2026 – 05.07.2026 Last ned"
+    },
+    "2026-07-06_2026-07-12": {
+      "date_from": "2026-07-06",
+      "date_to": "2026-07-12",
+      "event_id": "a69326501828a5bdd540fb4dac7f5543cf43ed38c7acc1890a7e59d6292dc639",
+      "first_seen_at": "2026-08-14T12:11:32+00:00",
+      "notification_status": "baseline",
+      "source_url": "https://info.nrk.no/wp-content/uploads/2026/07/Offentlig-journal-06.07.2026-12.07.2026-.pdf",
+      "title": "Offentlig journal 06.07.2026 – 12.07.2026 Last ned"
+    },
+    "2026-07-13_2026-07-19": {
+      "date_from": "2026-07-13",
+      "date_to": "2026-07-19",
+      "event_id": "28b2139ae11bde7bb5fba54479d9ea78fd46c6e8fb25c94a40489c3eaff891f4",
+      "first_seen_at": "2026-08-14T12:11:32+00:00",
+      "notification_status": "baseline",
+      "source_url": "https://info.nrk.no/wp-content/uploads/2026/07/Offentlig-journal-13.07.2026-19.07.2026.pdf",
+      "title": "Offentlig journal 13.07.2026 – 19.07.2026 Last ned"
+    },
+    "2026-07-20_2026-07-26": {
+      "date_from": "2026-07-20",
+      "date_to": "2026-07-26",
+      "event_id": "8e54e7da0de282cb01a52735adc9240d733d7887a9030a12335aebd038be50dc",
+      "first_seen_at": "2026-08-14T12:11:32+00:00",
+      "notification_status": "baseline",
+      "source_url": "https://info.nrk.no/wp-content/uploads/2026/07/Offentlig-journal-20.07.2026-26.07.2026.pdf",
+      "title": "Offentlig journal 20.07.2026 – 26.07.2026 Last ned"
+    },
+    "2026-07-27_2026-08-02": {
+      "date_from": "2026-07-27",
+      "date_to": "2026-08-02",
+      "event_id": "cdd438799962b419420b433e44e1db7880295c3c9ce61476c7d97c1ded3b3dff",
+      "first_seen_at": "2026-08-14T12:11:32+00:00",
+      "notification_status": "baseline",
+      "source_url": "https://info.nrk.no/wp-content/uploads/2026/08/Offentlig-journal-27.07.2026-02.08.2026.pdf",
+      "title": "Offentlig journal 27.07.2026 – 02.08.2026 Last ned"
+    },
+    "2026-08-03_2026-08-09": {
+      "date_from": "2026-08-03",
+      "date_to": "2026-08-09",
+      "event_id": "c68adf1436254196c98b78c1a9ab734d432f3e9e9cbe5bc6a17aa969025a1674",
+      "first_seen_at": "2026-08-14T12:11:32+00:00",
+      "notification_status": "baseline",
+      "source_url": "https://info.nrk.no/wp-content/uploads/2026/08/Offentlig-journal-03.08.2026-09.08.2026.pdf",
+      "title": "Offentlig journal 03.08.2026 – 09.08.2026 Last ned"
+    }
+  },
+  "schema_version": 1
+}
