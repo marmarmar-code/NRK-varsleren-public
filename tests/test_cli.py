@@ -1,5 +1,8 @@
+import pytest
+
 from nrk_journal_monitor import __main__ as cli
 from nrk_journal_monitor.models import JournalObservation
+from nrk_journal_monitor.notifier import NotificationError
 from nrk_journal_monitor.source import SourceError
 
 
@@ -42,3 +45,22 @@ def test_source_command_fails_closed(monkeypatch, capsys) -> None:
 
     assert cli.main(["test-source"]) == 1
     assert "Source check failed: SourceError" in capsys.readouterr().err
+
+
+def test_failure_alert_accepts_public_repository(monkeypatch) -> None:
+    monkeypatch.setenv("GITHUB_SERVER_URL", "https://github.com")
+    monkeypatch.setenv("GITHUB_REPOSITORY", "marmarmar-code/NRK-varsleren-public")
+    monkeypatch.setenv("GITHUB_RUN_ID", "123456")
+
+    message = cli._scheduled_failure_slack_message()
+
+    assert "marmarmar-code/NRK-varsleren-public/actions/runs/123456" in message
+
+
+def test_failure_alert_rejects_unexpected_repository(monkeypatch) -> None:
+    monkeypatch.setenv("GITHUB_SERVER_URL", "https://github.com")
+    monkeypatch.setenv("GITHUB_REPOSITORY", "other/repository")
+    monkeypatch.setenv("GITHUB_RUN_ID", "123456")
+
+    with pytest.raises(NotificationError, match="metadata is invalid"):
+        cli._scheduled_failure_slack_message()

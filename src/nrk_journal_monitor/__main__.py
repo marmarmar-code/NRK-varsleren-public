@@ -18,6 +18,10 @@ TEST_OBSERVATION = JournalObservation(
     title="FIKTIV offentlig journal 01.01.2099–07.01.2099",
     source_url="https://info.nrk.no/fiktiv-journal-test.pdf",
 )
+_ALLOWED_FAILURE_ALERT_REPOSITORIES = {
+    "marmarmar-code/NRK-varsleren",
+    "marmarmar-code/NRK-varsleren-public",
+}
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -54,7 +58,7 @@ def _scheduled_failure_slack_message() -> str:
     run_id = os.environ.get("GITHUB_RUN_ID", "")
     if (
         server_url != "https://github.com"
-        or repository != "marmarmar-code/NRK-varsleren"
+        or repository not in _ALLOWED_FAILURE_ALERT_REPOSITORIES
         or not run_id.isdigit()
     ):
         raise NotificationError("GitHub run metadata is invalid for failure alert")
