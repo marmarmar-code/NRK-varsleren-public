@@ -19,6 +19,22 @@ def test_parses_visible_journal_link() -> None:
     assert items[0].source_url == "https://info.nrk.no/docs/journal.pdf"
 
 
+def test_recovers_single_extra_digit_in_start_year() -> None:
+    items = parse_journal_page(
+        '<p><a href="/docs/journal.pdf">Offentlig journal 17.08.20206–23.08.2026</a></p>'
+    )
+    assert [(item.date_from, item.date_to) for item in items] == [
+        ("2026-08-17", "2026-08-23")
+    ]
+
+
+def test_rejects_unrecoverable_five_digit_year() -> None:
+    with pytest.raises(SourceError, match="stable date period"):
+        parse_journal_page(
+            '<p><a href="/docs/journal.pdf">Offentlig journal 17.08.21206–23.08.2026</a></p>'
+        )
+
+
 def test_generic_download_uses_journal_context() -> None:
     items = parse_journal_page(
         '<div><span>Offentlig journal 1.8.2026 - 7.8.2026</span> '
