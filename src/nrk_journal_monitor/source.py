@@ -30,6 +30,12 @@ _DATE_PERIOD = re.compile(
     r"(?P<end>\d{1,2}[./-]\d{1,2}[./-]\d{4})",
     re.I,
 )
+_LOOSE_DATE_PERIOD = re.compile(
+    r"(?P<start_day>\d{1,2})[./-](?P<start_month>\d{1,2})[./-](?P<start_year>\d{4,5})\s*"
+    r"(?:–|—|-|til)\s*"
+    r"(?P<end_day>\d{1,2})[./-](?P<end_month>\d{1,2})[./-](?P<end_year>\d{4,5})",
+    re.I,
+)
 
 
 class SourceError(RuntimeError):
@@ -166,18 +172,58 @@ def _parse_norwegian_date(value: str) -> str:
     return date(year, month, day).isoformat()
 
 
-def _period_from_text(value: str) -> tuple[str, str] | None:
-    match = _DATE_PERIOD.search(value)
+def _repair_single_extra_year_digit(value: str, expected_year: str) -> str | None:
+    if len(value) != 5 or len(expected_year) != 4:
+        return None
+    candidates = {value[:index] + value[index + 1 :] for index in range(len(value))}
+    return expected_year if expected_year in candidates else None
+
+
+def _recover_period_with_single_year_typo(value: str) -> tuple[str, str] | None:
+    match = _LOOSE_DATE_PERIOD.search(value)
     if match is None:
         return None
+
+    start_year = match.group("start_year")
+    end_year = match.group("end_year")
+    if len(start_year) == 5 and len(end_year) == 4:
+        start_year = _repair_single_extra_year_digit(start_year, end_year) or ""
+    elif len(end_year) == 5 and len(start_year) == 4:
+        end_year = _repair_single_extra_year_digit(end_year, start_year) or ""
+    else:
+        return None
+    if not start_year or not end_year:
+        return None
+
     try:
-        start = _parse_norwegian_date(match.group("start"))
-        end = _parse_norwegian_date(match.group("end"))
+        start_date = date(
+            int(start_year), int(match.group("start_month")), int(match.group("start_day"))
+        )
+        end_date = date(
+            int(end_year), int(match.group("end_month")), int(match.group("end_day"))
+        )
     except ValueError:
         return None
-    if end < start:
+
+    # NRK journals are short periods. Keep typo recovery narrow enough that a
+    # malformed year can never turn into a distant or otherwise implausible period.
+    if end_date < start_date or (end_date - start_date).days > 14:
         return None
-    return start, end
+    return start_date.isoformat(), end_date.isoformat()
+
+
+def _period_from_text(value: str) -> tuple[str, str] | None:
+    match = _DATE_PERIOD.search(value)
+    if match is not None:
+        try:
+            start = _parse_norwegian_date(match.group("start"))
+            end = _parse_norwegian_date(match.group("end"))
+        except ValueError:
+            return None
+        if end < start:
+            return None
+        return start, end
+    return _recover_period_with_single_year_typo(value)
 
 
 def parse_journal_page(html: str, *, page_url: str = SOURCE_URL) -> list[JournalObservation]:
