@@ -157,6 +157,15 @@
       "notification_status": "accepted",
       "source_url": "https://info.nrk.no/wp-content/uploads/2026/09/Offentlig-journal-14.09.2026-20.09.2026.pdf",
       "title": "Offentlig journal 14.09.2026 – 20.09.2026 Last ned"
+    },
+    "2026-09-21_2026-09-29": {
+      "date_from": "2026-09-21",
+      "date_to": "2026-09-29",
+      "event_id": "12acb321ccb4a6f1d4fcfccde561767329d874d9552b751500b90bc69922d623",
+      "first_seen_at": "2026-09-29T08:33:37+00:00",
+      "notification_status": "accepted",
+      "source_url": "https://info.nrk.no/wp-content/uploads/2026/09/Offentlig-journal-21.09.2026-29.09.2026.pdf",
+      "title": "Offentlig journal 21.09.2026 – 29.09.2026 Last ned"
     }
   },
   "schema_version": 1
