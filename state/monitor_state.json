@@ -158,6 +158,15 @@
       "source_url": "https://info.nrk.no/wp-content/uploads/2026/09/Offentlig-journal-14.09.2026-20.09.2026.pdf",
       "title": "Offentlig journal 14.09.2026 – 20.09.2026 Last ned"
     },
+    "2026-09-21_2026-09-27": {
+      "date_from": "2026-09-21",
+      "date_to": "2026-09-27",
+      "event_id": "4fb5f1c5cdfd217cec6e9849560db66d7633ed95dfa89e0125953336e611400e",
+      "first_seen_at": "2026-10-06T10:21:32+00:00",
+      "notification_status": "accepted",
+      "source_url": "https://info.nrk.no/wp-content/uploads/2026/09/Offentlig-journal-21.09.2026-29.09.2026.pdf",
+      "title": "Offentlig journal 21.09.2026 – 27.09.2026 Last ned"
+    },
     "2026-09-21_2026-09-29": {
       "date_from": "2026-09-21",
       "date_to": "2026-09-29",
@@ -166,6 +175,15 @@
       "notification_status": "accepted",
       "source_url": "https://info.nrk.no/wp-content/uploads/2026/09/Offentlig-journal-21.09.2026-29.09.2026.pdf",
       "title": "Offentlig journal 21.09.2026 – 29.09.2026 Last ned"
+    },
+    "2026-09-28_2026-10-04": {
+      "date_from": "2026-09-28",
+      "date_to": "2026-10-04",
+      "event_id": "043c9c459d358b21227950eceaff1d295f05d5e926aa27695dcc9de25115160c",
+      "first_seen_at": "2026-10-06T10:21:32+00:00",
+      "notification_status": "accepted",
+      "source_url": "https://info.nrk.no/wp-content/uploads/2026/10/Offentlig-journal-28.09.2026-04.10.2026.pdf",
+      "title": "Offentlig journal 28.09.2026 – 04.10.2026 Last ned"
     }
   },
   "schema_version": 1
