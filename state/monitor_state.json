@@ -184,6 +184,15 @@
       "notification_status": "accepted",
       "source_url": "https://info.nrk.no/wp-content/uploads/2026/10/Offentlig-journal-28.09.2026-04.10.2026.pdf",
       "title": "Offentlig journal 28.09.2026 – 04.10.2026 Last ned"
+    },
+    "2026-10-05_2026-10-11": {
+      "date_from": "2026-10-05",
+      "date_to": "2026-10-11",
+      "event_id": "f067f83224ad07d3003517e5f69b77a09e61be4c40d0c7fe9c07123163e5ba44",
+      "first_seen_at": "2026-10-13T16:01:21+00:00",
+      "notification_status": "accepted",
+      "source_url": "https://info.nrk.no/wp-content/uploads/2026/10/Offentlig-journal-05.10.2026-11.10.2026-.pdf",
+      "title": "Offentlig journal 05.10.2026 – 11.10.2026 Last ned"
     }
   },
   "schema_version": 1
